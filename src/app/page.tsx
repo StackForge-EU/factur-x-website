@@ -242,7 +242,6 @@ export default function HomePage() {
               <a href="#demo" className="btn btn-primary">
                 Try the live demo
               </a>
-              <StarButton label="Star on GitHub" className="btn-ghost-dark" />
             </div>
 
             <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink-300">
@@ -361,7 +360,7 @@ export default function HomePage() {
             <InstallCommand />
           </div>
           <div className="mt-4">
-            <StarButton label="Star on GitHub" className="btn-primary" />
+            <StarButton label="Star on GitHub" />
           </div>
         </div>
       </section>

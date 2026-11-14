@@ -1,4 +1,3 @@
-import { NPM_URL } from "@/lib/site";
 import { StarButton } from "./StarButton";
 
 const NAV = [
@@ -26,10 +25,7 @@ export function SiteHeader() {
               {label}
             </a>
           ))}
-          <a href={NPM_URL} className="btn btn-ghost-dark hidden px-3 py-2 sm:inline-flex">
-            npm
-          </a>
-          <StarButton label="Star" className="btn-primary px-3 py-2" />
+          <StarButton compact />
         </nav>
       </div>
     </header>
