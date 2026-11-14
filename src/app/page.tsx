@@ -2,7 +2,7 @@ import { Code } from "@/components/Code";
 import { CopyButton } from "@/components/CopyButton";
 import { DemoLoader } from "@/components/DemoLoader";
 import { StarButton } from "@/components/StarButton";
-import { GITHUB_URL, INSTALL_COMMAND, PACKAGE_NAME, SITE_URL } from "@/lib/site";
+import { GITHUB_URL, INSTALL_COMMAND, JSR_URL, NPM_URL, PACKAGE_NAME, SITE_URL } from "@/lib/site";
 
 const HERO_SNIPPET = `import { embedFacturX, Profile, Flavor } from "${PACKAGE_NAME}";
 
@@ -142,6 +142,8 @@ const STRUCTURED_DATA = [
       "TypeScript library to generate, embed, extract and validate Factur-X, ZUGFeRD and XRechnung invoices (EN 16931 CII XML in PDF/A-3).",
     url: `${SITE_URL}/`,
     codeRepository: GITHUB_URL,
+    // The same package on its registries, so search engines connect site, repo and package.
+    sameAs: [NPM_URL, JSR_URL],
     programmingLanguage: "TypeScript",
     runtimePlatform: ["Node.js", "Deno"],
     license: "https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12",
@@ -301,8 +303,16 @@ export default function HomePage() {
             ))}
           </div>
           <p className="mt-8 text-sm text-ink-300">
-            Deno: <code className="font-mono text-ink-100">{`import { embedFacturX } from "jsr:${PACKAGE_NAME}";`}</code>{" "}
-            · Full reference in the{" "}
+            Available on{" "}
+            <a className="text-white underline" href={NPM_URL}>
+              npm
+            </a>{" "}
+            and{" "}
+            <a className="text-white underline" href={JSR_URL}>
+              JSR
+            </a>{" "}
+            (Deno: <code className="font-mono text-ink-100">{`import { embedFacturX } from "jsr:${PACKAGE_NAME}";`}</code>
+            ). Full reference in the{" "}
             <a className="text-white underline" href={`${GITHUB_URL}#readme`}>
               README
             </a>{" "}
