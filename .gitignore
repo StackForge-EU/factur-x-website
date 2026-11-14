@@ -1,0 +1,7 @@
+node_modules/
+.next/
+next-env.d.ts
+# copied from @stackforge-eu/factur-x by scripts/copy-schemas.mjs
+public/schema/
+.DS_Store
+*.tsbuildinfo
