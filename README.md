@@ -26,6 +26,13 @@ cp -r public .next/standalone/ && cp -r .next/static .next/standalone/.next/
 node .next/standalone/server.js
 ```
 
+## Docker
+
+```bash
+docker build -t factur-x-website .
+docker run --rm -p 5000:5000 factur-x-website   # http://localhost:5000
+```
+
 ## How it works
 
 - **Library in the browser** – the package targets Node. `next.config.ts` aliases `crypto`, `console`, `fs`, `path`, `url` and `module` to the shims in `src/shims/` for the browser bundle, and `src/lib/xsd.ts` reimplements `validateXsd` on `libxml2-wasm`, which is pinned to the package's version range so both share one copy.
